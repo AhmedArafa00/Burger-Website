@@ -1,0 +1,306 @@
+section {
+    padding: 3rem 9%;
+}
+.home {
+    margin-top: 7rem;
+    background: url(../images/home-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    .content {
+        max-width: 70rem;
+        text-align: center;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+        h3 {
+            @include title-text(4rem);
+        }
+        p {
+            @include grap-text(1.7rem);
+            padding: 2rem 0;
+        }
+    }
+}
+.service {
+    @include grid(41rem);
+
+    .box {
+      text-align: center;
+      padding: 2rem;
+
+      i {
+        height: 7rem;
+        width: 7rem;
+        line-height: 7rem;
+        font-size: 2.5rem;
+        color: $black;
+        background-color: $yellow;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+      }
+      h3 {
+        padding: 1rem 0;
+        @include title-text(2rem)
+      }
+      p {
+        @include grap-text(1.5rem)
+      }
+    }
+}
+.menu {
+    .box-container {
+        @include grid(31rem);
+        .box {
+            text-align: center;
+            &:hover {
+                transform: translateY(1rem);
+            }
+            img {
+                height: 25rem;
+            }
+            .content {
+                padding: 1rem 0;
+
+             .starts {
+                margin-bottom: 2rem;
+
+                i {
+                    font-size: 1.7rem;
+                    color: $yellow;
+                }
+             }
+             h3 {
+                @include title-text(2rem)
+             }
+             .price {
+                @include grap-text(2rem)
+             }
+            }
+        }
+    }
+}
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .image {
+        flex: 1 1 40rem;
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        flex: 1 1 40rem;
+
+        .title {
+            @include title-text(2.5rem);
+        }
+        p {
+            @include grap-text(1.5rem);
+            padding: 2rem 0;
+           
+        }
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+
+            h3 {
+                flex: 1 1 16rem;
+                @include title-text(1.5rem); 
+
+                i {
+                    padding-right: .5rem;
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
+.reviews {
+    .box-container {
+        @include grid(41rem);
+
+        .box {
+            text-align: center;
+            padding: 2rem;
+
+            img {
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+            }
+            h3 {
+                @include title-text(2rem)
+            }
+            p {
+                @include grap-text(1.5rem);
+                padding:1rem 0;
+            }
+            .starts {
+                padding-top: .5rem;
+                i {
+                    font-size: 1.7rem;
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
+.contact {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        .map {
+            flex: 1 1 40rem;
+        }
+        .form {
+            flex: 1 1 40rem;
+
+            .icons-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin-bottom: 3rem;
+                .icons {
+                    flex: 1 1 17rem;
+                    text-align: center;
+
+                    i {
+                       height: 6rem;
+                       width: 6rem;
+                       line-height: 6rem;
+                       border-radius: 50%;
+                       background-color: $yellow;
+                       color: $black;
+                       font-size: 2rem;
+                       margin-bottom: 1rem;
+                    }
+                    h3 {
+                        padding: 1rem 0;
+                        @include title-text(2rem);
+                    }
+                    p {
+                        @include grap-text(1.5rem)
+                    }
+                }
+            }
+            form {
+                text-align: center;
+                .box {
+                    padding: 1.2rem 1.4rem;
+                    font-size: 1.6rem;
+                    color: $white;
+                    background: none;
+                    border: $border;
+                    text-transform: none;
+                    width: 100%;
+                    margin: .7rem 0;
+                    &:focus {
+                        border-color: $yellow;
+                    }
+                }
+                textarea {
+                    height: 15rem;
+                    resize: none;
+                }
+            }
+        }
+    }
+}
+.blogs {
+    .box-container {
+        @include grid(41rem);
+
+        .box {
+            position: relative;
+            &:hover .image {
+                img {
+                    transform: scale(1.1);
+                }
+                .icons {
+                    transform: translateY(0);
+                }
+
+            }
+
+            .image {
+                height: 25rem;
+                overflow: hidden;
+                position: relative;
+                .icons {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 2rem;
+                    background-color: $black;
+                    bottom:0;left:0;right:0;
+                    z-index: 9999;
+                    transform: translateY(10rem);
+                    a {
+                        font-size: 1.5rem;
+                        color: $white;
+                        i {
+                            padding-right: .5rem;
+                            color: $yellow
+                        }
+                        &:hover {
+                            color: $yellow;
+                        }
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content {
+                text-align: center;
+                padding: 2rem;
+                h3 {
+                    @include title-text(2rem)
+                }
+                p {
+                    @include grap-text(1.5rem);
+                    padding:1.5rem 0;
+                }
+            }
+        }
+    }
+}
+.footer {
+    text-align: center;
+    background: linear-gradient(transparent,$black);
+
+    .links {
+        a {
+            margin: 1rem;
+        }
+    }
+    .credit {
+        @include grap-text(2rem);
+        margin-top:2rem;
+        span {
+            color: $yellow;
+        }
+    }
+}
+@media (max-width:1200px) {
+    section {
+     padding: 2rem 2rem;
+    }
+}
+@media (max-width:767px) {
+    .home .content h3 {
+     font-size: 3rem;
+    }
+}
